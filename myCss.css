@@ -12,8 +12,8 @@ h2,h3{font-family: 'Josefin Sans', sans-serif; color: #000; font-size: 40px; fon
 
 .mobile-menu-icon{visibility: hidden; display: flex; flex-direction: column;  position: absolute; top: 65px; right: 10vw; z-index: 2; }
 .mobile-menu-icon:hover{ cursor: pointer; }
-.mobile-menu-icon div{ width: 35px; height: 3px;top: 20px;  background-color: #fff; margin-bottom: 8px;  }
-.mobile-black{position: absolute; width: 100vw; height: 100vh; background-color: #000; z-index: 1; }
+.mobile-menu-icon div{transition: 1s; animation-delay:2s; width: 35px; height: 3px;top: 20px;  background-color: #fff; margin-bottom: 8px;  }
+.mobile-black{visibility: hidden; position: fixed; width: 100%; height: 100vh; background-color: #000; z-index: 1; }
 
 .head{background-image: url(images/desktop/image-hero.jpg);  background-size:  100% ; padding: 65px 0; height: 650px; margin-bottom: 160px;  background-repeat:no-repeat ; }
 .header{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 125px;}
@@ -39,6 +39,7 @@ h2,h3{font-family: 'Josefin Sans', sans-serif; color: #000; font-size: 40px; fon
 
 .creation-button{width: 160px; height: 40px; text-align: center; line-height: 40px; border:0; color: #000; background-color: #fff; letter-spacing: 2px;}
 .creation-button:hover{  color: #fff; background-color: #000; cursor: pointer; transition: all linear.3s;}
+.creation-button-second{ display: none; }
 
 .creation-catalog{ display: flex; justify-content: space-between; flex-wrap: wrap; }
 .creation-catalog a{ margin-bottom: 30px; position: relative; }
@@ -56,6 +57,8 @@ h2,h3{font-family: 'Josefin Sans', sans-serif; color: #000; font-size: 40px; fon
 .footer-elements .footer-icons a{ margin-left:10px; padding-bottom: 4px;  }
 .footer-elements .footer-icons a:hover{ cursor: pointer; border-bottom: 2px solid; }
 
+.copy-last{ color:  hsl(0, 0%, 55%); }
+
 @media only screen and (max-width: 1440px) {
 .container-fixed{ max-width: 100vw;  }
 .head{ width: 100%; }
@@ -63,17 +66,17 @@ h2,h3{font-family: 'Josefin Sans', sans-serif; color: #000; font-size: 40px; fon
 
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 750px) {
 
 .container{  max-width: 100vw;  }
 
 .mobile-menu-icon{visibility: visible;}
-
+.mobile-black{visibility: visible; overflow: hidden }
 
 .head{  width: 100%; background-image: url(images/mobile/image-hero.jpg);  padding: 65px auto;   }
 .header{ flex-direction: column; justify-content: right;}
 .header img{ position: absolute; left: 25px;}
-.header .nav-list{ padding:0; width: 100%; flex-direction: column;  position: absolute; top: calc(50% - 22vh); left: 25px; }
+.header .nav-list{ padding:0; width: 100%; flex-direction: column;  position: absolute; top: calc(50% - 22vh); padding-left:25px ;}
 .header .nav-list li{ margin-top: 25px;  }
 .header .nav-list li a{font-family: 'Josefin Sans', sans-serif; font-weight: 200; font-size: 2rem; }
 .nav-list li:hover:before{  border-bottom:0;  }
@@ -90,6 +93,17 @@ h2,h3{font-family: 'Josefin Sans', sans-serif; color: #000; font-size: 40px; fon
 .creation-head{flex-direction: column; align-items: center; margin-bottom: 90px;}
 .creation-button-first{display: none;}
 
+.creation-catalog{  justify-content: space-around; flex-wrap: wrap; }
+.creation-catalog img{ width: 90vw; }
+.creation-button-second{ font-weight: 400; border: 1px solid black; margin: 0 auto; width: 30vw; display: block; }
+
+.footer{ height: auto; text-align: center;}
+.footer .nav-list{ width: 100%; flex-direction: column; }
+.footer-elements{ flex-direction: column; justify-content: space-around; flex-wrap: wrap; align-items: center; }
+.footer-elements div{ width: 80%; }
+.footer-elements div:nth-child(2n){ text-align: center; }
+.footer-elements :nth-child(2) { order:2; }
+.footer-elements :nth-child(4) { order:4; }
 
 
 

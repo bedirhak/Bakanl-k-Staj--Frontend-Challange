@@ -1,16 +1,24 @@
 $(document).ready(function() { 
+    var m = 0;
     
+    $(window).resize(function(){
+       
+        if (window.innerWidth < 750 && m%2==0) {
+            $(".header .nav-list").slideUp();
+            $(".mobile-black").slideUp();
+        }
+        else{
+            $(".header .nav-list").slideDown();
+            $(".mobile-black").slideDown();
+            
+        }
+    });
+      
     //Mobile Nav Bar
-    $(".header .nav-list").slideUp();
-    $(".mobile-black").slideUp();
+   
     
     $( ".mobile-line:first-child" ).css("transform-origin","bottom left");
     $( ".mobile-line:last-child" ).css("transform-origin","top left");
-    
-    
-    var m = 0;
-    
-    
     
     
     $(".mobile-menu-icon").click(function(){
